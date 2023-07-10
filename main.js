@@ -955,7 +955,7 @@ var Graph = /** @class */ (function () {
 /*!**********************************!*\
   !*** ./src/app/_models/index.ts ***!
   \**********************************/
-/*! exports provided: Profile, Configuration, User, Page, UserGroup, PageFunction, Article, ArticleCategory, ServerSideDataTablesResponse, Product, ProductCategory, Price, DocFile, Graph, Question, Report, SearchAudit, Contact, Region, District, ContactGroup, ContactDetail */
+/*! exports provided: Profile, Configuration, User, Page, UserGroup, PageFunction, Article, ArticleCategory, ServerSideDataTablesResponse, Product, ProductCategory, ProductGraph, DocFile, Graph, Question, Report, SearchAudit, Contact, Region, District, ContactGroup, ContactDetail */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -993,8 +993,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _price_index_product_category__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./price-index/product-category */ "./src/app/_models/price-index/product-category.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ProductCategory", function() { return _price_index_product_category__WEBPACK_IMPORTED_MODULE_10__["ProductCategory"]; });
 
-/* harmony import */ var _price_index_price__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./price-index/price */ "./src/app/_models/price-index/price.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Price", function() { return _price_index_price__WEBPACK_IMPORTED_MODULE_11__["Price"]; });
+/* harmony import */ var _price_index_product_graph__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./price-index/product-graph */ "./src/app/_models/price-index/product-graph.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ProductGraph", function() { return _price_index_product_graph__WEBPACK_IMPORTED_MODULE_11__["ProductGraph"]; });
 
 /* harmony import */ var _doc_file__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./doc-file */ "./src/app/_models/doc-file.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DocFile", function() { return _doc_file__WEBPACK_IMPORTED_MODULE_12__["DocFile"]; });
@@ -1177,47 +1177,6 @@ var UserGroup = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/_models/price-index/price.ts":
-/*!**********************************************!*\
-  !*** ./src/app/_models/price-index/price.ts ***!
-  \**********************************************/
-/*! exports provided: Price */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Price", function() { return Price; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var Price = /** @class */ (function () {
-    function Price(jsonFromApi) {
-        this.id = jsonFromApi.id;
-        this.price = jsonFromApi.price;
-        this.rice_product_id = jsonFromApi.rice_product_id;
-        this.price_date = jsonFromApi.price_date;
-        this.created_at = jsonFromApi.created_at;
-    }
-    Price = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({ providedIn: 'root' }),
-        __metadata("design:paramtypes", [Object])
-    ], Price);
-    return Price;
-}());
-
-;
-
-
-/***/ }),
-
 /***/ "./src/app/_models/price-index/product-category.ts":
 /*!*********************************************************!*\
   !*** ./src/app/_models/price-index/product-category.ts ***!
@@ -1251,6 +1210,47 @@ var ProductCategory = /** @class */ (function () {
         __metadata("design:paramtypes", [Object])
     ], ProductCategory);
     return ProductCategory;
+}());
+
+;
+
+
+/***/ }),
+
+/***/ "./src/app/_models/price-index/product-graph.ts":
+/*!******************************************************!*\
+  !*** ./src/app/_models/price-index/product-graph.ts ***!
+  \******************************************************/
+/*! exports provided: ProductGraph */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductGraph", function() { return ProductGraph; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ProductGraph = /** @class */ (function () {
+    function ProductGraph(jsonFromApi) {
+        this.id = jsonFromApi.id;
+        this.embed_url_code = jsonFromApi.embed_url_code;
+        this.rice_product_id = jsonFromApi.rice_product_id;
+        this.name_of_graph = jsonFromApi.name_of_graph;
+        this.created_at = jsonFromApi.created_at;
+    }
+    ProductGraph = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({ providedIn: 'root' }),
+        __metadata("design:paramtypes", [Object])
+    ], ProductGraph);
+    return ProductGraph;
 }());
 
 ;
@@ -2790,16 +2790,16 @@ var ProductService = /** @class */ (function () {
         var response = this.http.post(this.appConfig.api_base_url_backoffice + 'deleteProduct', data);
         return response;
     };
-    ProductService.prototype.savePrice = function (data) {
-        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'savePrice', data);
+    ProductService.prototype.saveProductGraph = function (data) {
+        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'saveProductGraph', data);
         return response;
     };
-    ProductService.prototype.updatePrice = function (data) {
-        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'updatePrice', data);
+    ProductService.prototype.updateProductGraph = function (data) {
+        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'updateProductGraph', data);
         return response;
     };
-    ProductService.prototype.deletePrice = function (data) {
-        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'deletePrice', data);
+    ProductService.prototype.deleteProductGraph = function (data) {
+        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'deleteProductGraph', data);
         return response;
     };
     ProductService = __decorate([
@@ -3143,6 +3143,8 @@ var AppConfig = /** @class */ (function () {
     function AppConfig() {
         // elastic_base_url: string = 'http://localhost/arg-api/public/api/';
         // elastic_base_url: string = 'http://preview.bycavemen.com/arg_api/public/api/';
+        // api_base_url: string = 'http://localhost/datagonalverse/thailand-backoffice-api/public/';
+        // api_base_url_backoffice: string = 'http://localhost/datagonalverse/thailand-backoffice-api/public/backoffice-api/';
         // api_base_url: string = 'http://localhost/thailand-backstage-api/public/';
         // api_base_url_backoffice: string = 'http://localhost/thailand-backstage-api/public/backoffice-api/';
         // api_base_url: string = 'http://backstage.bycavemen.com/api/public/';
