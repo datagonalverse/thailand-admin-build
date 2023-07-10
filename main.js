@@ -1386,6 +1386,7 @@ var Question = /** @class */ (function () {
         this.created_by = jsonFromApi.created_by;
         this.discursion_engagement = jsonFromApi.discursion_engagement;
         this.is_published = jsonFromApi.is_published;
+        this.status = jsonFromApi.status;
         this.created_at = jsonFromApi.created_at;
     }
     Question = __decorate([
