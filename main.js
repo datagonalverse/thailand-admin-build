@@ -2776,11 +2776,11 @@ var ProductService = /** @class */ (function () {
         return response;
     };
     ProductService.prototype.publishAction = function (data) {
-        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'publishAction', data);
+        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'publishProduct', data);
         return response;
     };
     ProductService.prototype.unpublishAction = function (data) {
-        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'unpublishAction', data);
+        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'unpublishProduct', data);
         return response;
     };
     ProductService.prototype.reviewedAction = function (data) {
@@ -3001,6 +3001,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 // import { DashboardComponent } from './dashboard/dashboard.component';
 
 
+
 var routes = [
     // { path: '', component: DashboardComponent, canActivate: [AuthGuard] },
     { path: 'login', component: _login__WEBPACK_IMPORTED_MODULE_2__["LoginComponent"] },
@@ -3035,8 +3036,8 @@ var AppRoutingModule = /** @class */ (function () {
     AppRoutingModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes, { useHash: true })],
-            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
-            // providers: [{ provide: APP_BASE_HREF, useValue: '/backoffice/' }] // Adjust the value based on your base href
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]],
+            providers: [{ provide: _angular_common__WEBPACK_IMPORTED_MODULE_4__["APP_BASE_HREF"], useValue: '/backoffice/' }] // Adjust the value based on your base href
         })
     ], AppRoutingModule);
     return AppRoutingModule;
