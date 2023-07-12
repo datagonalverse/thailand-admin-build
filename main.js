@@ -2803,6 +2803,18 @@ var ProductService = /** @class */ (function () {
         var response = this.http.post(this.appConfig.api_base_url_backoffice + 'deleteProductGraph', data);
         return response;
     };
+    ProductService.prototype.saveProductFile = function (data) {
+        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'saveProductFile', data);
+        return response;
+    };
+    ProductService.prototype.updateProductFile = function (data) {
+        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'updateProductFile', data);
+        return response;
+    };
+    ProductService.prototype.deleteProductFile = function (data) {
+        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'deleteProductFile', data);
+        return response;
+    };
     ProductService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({ providedIn: 'root' }),
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], _app_config__WEBPACK_IMPORTED_MODULE_2__["AppConfig"]])
