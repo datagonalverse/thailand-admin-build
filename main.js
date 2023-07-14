@@ -764,6 +764,7 @@ var Contact = /** @class */ (function () {
         this.email_address = jsonFromApi.email_address;
         this.gps_location = jsonFromApi.gps_location;
         this.is_published = jsonFromApi.is_published;
+        this.is_business_or_person = jsonFromApi.is_business_or_person;
         this.created_at = jsonFromApi.created_at;
     }
     Contact = __decorate([
