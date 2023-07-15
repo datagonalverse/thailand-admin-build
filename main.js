@@ -2879,6 +2879,18 @@ var QuestionService = /** @class */ (function () {
         var response = this.http.post(this.appConfig.api_base_url_backoffice + 'deleteCommunityQuestion', data);
         return response;
     };
+    QuestionService.prototype.publishAction = function (data) {
+        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'publishCommunityQuestion', data);
+        return response;
+    };
+    QuestionService.prototype.unpublishAction = function (data) {
+        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'unpublishCommunityQuestion', data);
+        return response;
+    };
+    QuestionService.prototype.reviewedAction = function (data) {
+        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'reviewedAction', data);
+        return response;
+    };
     QuestionService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({ providedIn: 'root' }),
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], _app_config__WEBPACK_IMPORTED_MODULE_2__["AppConfig"]])
