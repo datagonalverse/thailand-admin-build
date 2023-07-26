@@ -2053,9 +2053,10 @@ var ContactService = /** @class */ (function () {
         // currentUser = JSON.parse(localStorage.getItem("currentUser"));
         this.currentUserToken = this.appConfig.currentUserToken;
     }
-    ContactService.prototype.getAllContacts = function (data) {
+    ContactService.prototype.getAllContacts = function (data, parameta2) {
         if (data === void 0) { data = ""; }
-        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'getAllContacts', data);
+        if (parameta2 === void 0) { parameta2 = ""; }
+        var response = this.http.post(this.appConfig.api_base_url_backoffice + 'getAllContacts?page=1', data);
         return response;
     };
     ContactService.prototype.saveContact = function (data) {
